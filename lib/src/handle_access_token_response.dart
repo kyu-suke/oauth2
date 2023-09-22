@@ -100,7 +100,7 @@ Credentials handleAccessTokenResponse(http.Response response, Uri tokenEndpoint,
     return Credentials(
       parameters['access_token'] as String,
       refreshToken: parameters['refresh_token'] as String?,
-      idToken: parameters['id_token'] as String?,
+      idToken: parameters['id_token'].toString() as String?,
       tokenEndpoint: tokenEndpoint,
       scopes: scopes,
       expiration: expiration,
